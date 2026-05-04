@@ -1,9 +1,14 @@
+"use client";
+
+import Image from "next/image";
+
 const experiences = [
   {
     period: "Sept 2021 — Present",
     company: "Autorité de Régulation du Transport Intérieur",
     location: "Côte d'Ivoire",
     role: "Head of R&D (Chef de Service)",
+    logo: "/logos/arti.png",
     roles: ["Lead Data Scientist", "Software & DevOps Engineer", "System Administrator"],
     highlights: [
       "Lead data scientist on national transport regulatory projects focused on data-driven policy making.",
@@ -23,6 +28,7 @@ const experiences = [
     company: "MTN Côte d'Ivoire",
     location: "Côte d'Ivoire",
     role: "Business Intelligence Analyst",
+    logo: "/logos/mtn.png",
     roles: [],
     highlights: [
       "Designed and maintained ETL workflows using SAS for nationwide network performance monitoring.",
@@ -38,6 +44,7 @@ const experiences = [
     company: "Orange Côte d'Ivoire",
     location: "Côte d'Ivoire",
     role: "Cybersecurity Data Scientist",
+    logo: "/logos/orange.svg",
     roles: [],
     highlights: [
       "Developed ML models to predict security breaches and prioritize infrastructure interventions.",
@@ -53,6 +60,7 @@ const experiences = [
     company: "NOVUS Emergent Technology",
     location: "Côte d'Ivoire",
     role: "Application Developer",
+    logo: "/logos/novus.jpg",
     roles: [],
     highlights: [
       "Designed and developed medical software applications for desktop and Android platforms.",
@@ -89,10 +97,22 @@ export default function Experience() {
               <div className="card p-6 sm:p-8">
                 {/* Header */}
                 <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
-                  <div>
-                    <h3 className="text-white font-bold text-xl">{exp.company}</h3>
-                    <p className="text-sm text-[#8888aa] mt-0.5">{exp.location}</p>
-                    <div className="flex flex-wrap gap-2 mt-2">
+                  <div className="flex items-start gap-4">
+                    {exp.logo && (
+                      <div className="w-16 h-16 shrink-0 bg-white/5 rounded-lg p-2 border border-white/10">
+                        <Image
+                          src={exp.logo}
+                          alt={exp.company}
+                          width={64}
+                          height={64}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                    )}
+                    <div>
+                      <h3 className="text-white font-bold text-xl">{exp.company}</h3>
+                      <p className="text-sm text-[#8888aa] mt-0.5">{exp.location}</p>
+                      <div className="flex flex-wrap gap-2 mt-2">
                       <span
                         className="text-sm font-semibold px-3 py-0.5 rounded-full"
                         style={{
@@ -112,6 +132,7 @@ export default function Experience() {
                         </span>
                       ))}
                     </div>
+                  </div>
                   </div>
                   <span className="text-sm text-[#8888aa] font-mono whitespace-nowrap">{exp.period}</span>
                 </div>
