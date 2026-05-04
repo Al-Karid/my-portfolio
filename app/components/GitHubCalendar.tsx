@@ -1,6 +1,11 @@
 "use client";
 
-import { GitHubCalendar } from "react-github-calendar";
+import dynamic from "next/dynamic";
+
+const GitHubCalendarComponent = dynamic(
+  () => import("react-github-calendar").then((mod) => mod.GitHubCalendar),
+  { ssr: false }
+);
 
 const darkTheme = {
   dark: ["#0d1117", "#3b1fa8", "#5538d1", "#6c63ff", "#a8a4ff"],
@@ -26,7 +31,7 @@ export default function GitHubContributions() {
         {/* Calendar */}
         <div className="card p-8 overflow-x-auto flex justify-center">
           <div className="w-full flex justify-center">
-            <GitHubCalendar
+            <GitHubCalendarComponent
               username="Al-Karid"
               colorScheme="dark"
               theme={darkTheme}
