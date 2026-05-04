@@ -1,6 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
-import { SearchIcon, BuildIcon, TrendIcon, TruckIcon, CloudIcon, DatabaseIcon, RestaurantIcon, FilmIcon } from "./Icons";
+import { SearchIcon, BuildIcon, TrendIcon, TruckIcon, CloudIcon, DatabaseIcon, RestaurantIcon, FilmIcon, CarFrontIcon } from "./Icons";
 
 type Project = {
   name: string;
@@ -88,6 +88,15 @@ const projects: Project[] = [
     icon: FilmIcon,
     color: "#ffc83c",
     github: "https://github.com/Al-Karid",
+  },
+  {
+    name: "Taxi Driver Mobile Application",
+    description:
+      "Personal taxi driver mobile app with real-time internet-based Twilio calling functionality for ride management, customer communication, and seamless connectivity.",
+    tech: ["React Native", "Twilio", "Node.js", "Firebase","Supabase"],
+    category: "Mobile",
+    icon: CarFrontIcon,
+    color: "#ff6584",
   },
 ];
 

@@ -9,9 +9,9 @@ export default function Nav() {
         </span>
         <div className="hidden sm:flex items-center gap-8">
           {[
-            ["About", "#about"],
-            ["Skills", "#skills"],
+            ["About", "/"],
             ["Activity", "#contributions"],
+            ["Skills", "#skills"],
             ["Experience", "#experience"],
             ["Projects", "#projects"],
             ["Education", "#education"],

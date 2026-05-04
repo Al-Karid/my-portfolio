@@ -19,4 +19,5 @@ export {
   MapPin as LocationIcon,
   Download as DownloadIcon,
   Palette as PaletteIcon,
+  CarFrontIcon as CarFrontIcon,
 } from "lucide-react";
