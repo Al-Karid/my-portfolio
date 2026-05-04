@@ -13,8 +13,8 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Alassane CISSE",
-    url: "https://alassane-cisse.com",
-    image: "https://alassane-cisse.com/me.jpeg",
+    url: "https://me.revalys.com",
+    image: "https://me.revalys.com/me.jpeg",
     jobTitle: "Data Scientist | Software Engineer | DevOps Engineer",
     email: "grencisse@gmail.com",
     telephone: "+2250757947428",
@@ -23,8 +23,9 @@ export default function Home() {
       name: "Abidjan, Côte d'Ivoire",
     },
     sameAs: [
-      "https://linkedin.com/in/alassane-cisse",
-      "https://github.com/alassane-cisse",
+      "https://www.linkedin.com/in/al-cisse/",
+      "https://github.com/Al-Karid",
+      "https://dev.to/alkarid",
     ],
     description: "Experienced Data Scientist, Software Engineer, and DevOps Engineer with expertise in ML, data pipelines, and cloud infrastructure.",
     knowsAbout: [

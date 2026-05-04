@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://alassane-cisse.com"),
+  metadataBase: new URL("https://me.revalys.com"),
   title: "Alassane CISSE | Data Scientist · Software Engineer · DevOps | Portfolio",
   description: "Experienced Data Scientist, Data Engineer, Full-Stack Software Developer, and DevOps Engineer with 5+ years of expertise. Specialized in machine learning, data pipelines, cloud infrastructure, and scalable application development. Available for remote opportunities.",
   keywords: [
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
   openGraph: {
     type: "website",
-    url: "https://alassane-cisse.com",
+    url: "https://me.revalys.com",
     title: "Alassane CISSE | Data Scientist · Software Engineer · DevOps",
     description: "Portfolio of an experienced Data Scientist, Engineer, and DevOps specialist with proven expertise in machine learning, cloud infrastructure, and scalable applications.",
     images: [
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         alt: "Alassane CISSE - Portfolio",
       },
     ],
-    siteName: "Alassane CISSE Portfolio",
+    siteName: "Alassane CISSE - Portfolio",
     locale: "en_US",
   },
   twitter: {
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://alassane-cisse.com",
+    canonical: "https://me.revalys.com",
   },
 };
 

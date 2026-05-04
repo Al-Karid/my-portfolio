@@ -1,6 +1,32 @@
 import Image from "next/image";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaDev } from "react-icons/fa6";
 
 export default function Hero() {
+  const socialLinks = [
+    {
+      name: "GitHub",
+      url: "https://github.com/Al-Karid",
+      icon: FaGithub,
+      bgColor: "hover:bg-gray-700 hover:border-gray-600",
+      iconColor: "text-gray-300 group-hover:text-white",
+    },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/al-cisse/",
+      icon: FaLinkedin,
+      bgColor: "hover:bg-blue-600 hover:border-blue-500",
+      iconColor: "text-blue-400 group-hover:text-white",
+    },
+    {
+      name: "Dev.to",
+      url: "https://dev.to/alkarid",
+      icon: FaDev,
+      bgColor: "hover:bg-orange-600 hover:border-orange-500",
+      iconColor: "text-orange-400 group-hover:text-white",
+    },
+  ];
+
   return (
     <section
       id="hero"
@@ -55,6 +81,25 @@ export default function Hero() {
             >
               Get In Touch
             </a>
+          </div>
+
+          {/* Social Links */}
+          <div className="animate-fade-in-up delay-450 flex gap-4 justify-center lg:justify-start mb-12">
+            {socialLinks.map((link) => {
+              const Icon = link.icon;
+              return (
+                <a
+                  key={link.name}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={link.name}
+                  className={`group w-12 h-12 rounded-full border border-white/20 flex items-center justify-center transition-all duration-300 ${link.bgColor}`}
+                >
+                  <Icon className={`w-6 h-6 transition-colors duration-300 ${link.iconColor}`} />
+                </a>
+              );
+            })}
           </div>
 
           {/* Quick stats */}
