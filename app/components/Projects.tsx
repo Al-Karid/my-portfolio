@@ -1,6 +1,21 @@
+import { ExternalLink } from "lucide-react";
+import { FaGithub } from "react-icons/fa6";
 import { SearchIcon, BuildIcon, TrendIcon, TruckIcon, CloudIcon, DatabaseIcon, RestaurantIcon, FilmIcon } from "./Icons";
 
-const projects = [
+type Project = {
+  name: string;
+  description: string;
+  tech: string[];
+  category: string;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  color: string;
+  github?: string;
+  demo?: string;
+};
+
+import React from "react";
+
+const projects: Project[] = [
   {
     name: "RAG Regulatory Search System",
     description:
@@ -72,6 +87,7 @@ const projects = [
     category: "AI / Web",
     icon: FilmIcon,
     color: "#ffc83c",
+    github: "https://github.com/Al-Karid",
   },
 ];
 
@@ -116,6 +132,34 @@ export default function Projects() {
                 </span>
               ))}
             </div>
+
+            {/* Links */}
+            {(p.github || p.demo) && (
+              <div className="flex gap-2 pt-2">
+                {p.github && (
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full border border-white/10 text-[#8888aa] hover:border-[#6c63ff]/50 hover:text-[#a8a4ff] transition-all"
+                  >
+                    <FaGithub className="w-3.5 h-3.5" />
+                    Code
+                  </a>
+                )}
+                {p.demo && (
+                  <a
+                    href={p.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full border border-white/10 text-[#8888aa] hover:border-[#43e97b]/50 hover:text-[#43e97b] transition-all"
+                  >
+                    <ExternalLink className="w-3.5 h-3.5" />
+                    Demo
+                  </a>
+                )}
+              </div>
+            )}
           </div>
         ))}
       </div>

@@ -11,6 +11,7 @@ export default function Nav() {
           {[
             ["About", "#about"],
             ["Skills", "#skills"],
+            ["Activity", "#contributions"],
             ["Experience", "#experience"],
             ["Projects", "#projects"],
             ["Education", "#education"],
