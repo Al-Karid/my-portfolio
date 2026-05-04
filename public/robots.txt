@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /.env*
+Disallow: /node_modules/
+
+Sitemap: https://alassane-cisse.com/sitemap.xml
