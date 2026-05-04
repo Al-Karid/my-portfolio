@@ -1,6 +1,7 @@
 import Script from "next/script";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
+import GitHubCalendar from "./components/GitHubCalendar";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
@@ -53,6 +54,8 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
+        <div className="section-divider max-w-6xl mx-auto" />
+        <GitHubCalendar />
         <div className="section-divider max-w-6xl mx-auto" />
         <Skills />
         <div className="section-divider max-w-6xl mx-auto" />
