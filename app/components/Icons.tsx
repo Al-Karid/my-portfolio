@@ -1,0 +1,22 @@
+// Re-export lucide-react icons for the portfolio
+export {
+  Brain as BrainIcon,
+  BarChart3 as ChartIcon,
+  Code2 as CodeIcon,
+  Cloud as CloudIcon,
+  GraduationCap as GraduationIcon,
+  Lightbulb as LightbulbIcon,
+  Globe as GlobeIcon,
+  Search as SearchIcon,
+  Layers as BuildIcon,
+  TrendingUp as TrendIcon,
+  Truck as TruckIcon,
+  Database as DatabaseIcon,
+  UtensilsCrossed as RestaurantIcon,
+  Film as FilmIcon,
+  Mail as MailIcon,
+  Phone as PhoneIcon,
+  MapPin as LocationIcon,
+  Download as DownloadIcon,
+  Palette as PaletteIcon,
+} from "lucide-react";

@@ -1,10 +1,12 @@
+import { GraduationIcon, CodeIcon, LightbulbIcon, GlobeIcon, PaletteIcon } from "./Icons";
+
 const education = [
   {
     degree: "Master's Degree in Data Science, Big Data & Artificial Intelligence",
     school: "International Data Science Institute, INP-HB",
     location: "Côte d'Ivoire",
     period: "2018 — 2020",
-    icon: "🎓",
+    icon: GraduationIcon,
     color: "#6c63ff",
   },
   {
@@ -12,7 +14,7 @@ const education = [
     school: "Ecole Supérieure Africaine des TIC (ESATIC)",
     location: "Côte d'Ivoire",
     period: "2015 — 2018",
-    icon: "💻",
+    icon: CodeIcon,
     color: "#43e97b",
   },
   {
@@ -20,18 +22,18 @@ const education = [
     school: "Lycée Classique d'Abidjan",
     location: "Côte d'Ivoire",
     period: "2012 — 2015",
-    icon: "📚",
+    icon: GraduationIcon,
     color: "#ff6584",
   },
 ];
 
 const softSkills = [
-  { label: "3D Design", icon: "🎨" },
-  { label: "Fluent English", icon: "🌍" },
-  { label: "Problem-solving", icon: "🧩" },
-  { label: "Creativity & Art", icon: "✨" },
-  { label: "Teamwork", icon: "🤝" },
-  { label: "Project Planning", icon: "📋" },
+  { label: "3D Design", icon: PaletteIcon },
+  { label: "Fluent English", icon: GlobeIcon },
+  { label: "Problem-solving", icon: LightbulbIcon },
+  { label: "Creativity & Art", icon: PaletteIcon },
+  { label: "Teamwork", icon: CodeIcon },
+  { label: "Project Planning", icon: LightbulbIcon },
 ];
 
 export default function Education() {
@@ -47,16 +49,16 @@ export default function Education() {
         {/* Education */}
         <div>
           <h3 className="text-white font-semibold text-lg mb-6 flex items-center gap-2">
-            <span>🎓</span> Academic Background
+            <GraduationIcon className="w-5 h-5" /> Academic Background
           </h3>
           <div className="space-y-4">
             {education.map((edu, i) => (
               <div key={i} className="card p-5 flex gap-4">
                 <div
-                  className="w-10 h-10 rounded-xl flex items-center justify-center text-xl shrink-0"
+                  className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
                   style={{ background: `${edu.color}15`, border: `1px solid ${edu.color}30` }}
                 >
-                  {edu.icon}
+                  <edu.icon className="w-5 h-5" style={{ color: edu.color }} />
                 </div>
                 <div>
                   <h4 className="text-white font-semibold text-sm leading-snug">{edu.degree}</h4>
@@ -74,12 +76,12 @@ export default function Education() {
         {/* Soft Skills */}
         <div>
           <h3 className="text-white font-semibold text-lg mb-6 flex items-center gap-2">
-            <span>💡</span> Soft Skills
+            <LightbulbIcon className="w-5 h-5" /> Soft Skills
           </h3>
           <div className="grid grid-cols-2 gap-3">
-            {softSkills.map(({ label, icon }) => (
+            {softSkills.map(({ label, icon: IconComponent }) => (
               <div key={label} className="card p-4 flex items-center gap-3 hover:border-[#6c63ff]/40 transition-all">
-                <span className="text-2xl">{icon}</span>
+                <IconComponent className="w-5 h-5 text-[#6c63ff]" />
                 <span className="text-[#aaaacc] text-sm font-medium">{label}</span>
               </div>
             ))}
@@ -88,7 +90,7 @@ export default function Education() {
           {/* Languages */}
           <div className="mt-6">
             <h3 className="text-white font-semibold text-lg mb-4 flex items-center gap-2">
-              <span>🌐</span> Languages
+              <GlobeIcon className="w-5 h-5" /> Languages
             </h3>
             <div className="space-y-3">
               {[

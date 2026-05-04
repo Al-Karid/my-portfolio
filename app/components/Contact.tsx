@@ -1,3 +1,5 @@
+import { MailIcon, PhoneIcon, LocationIcon, DownloadIcon } from "./Icons";
+
 export default function Contact() {
   return (
     <section id="contact" className="py-24 px-6 max-w-4xl mx-auto text-center">
@@ -17,8 +19,8 @@ export default function Contact() {
           href="mailto:grencisse@gmail.com"
           className="card p-6 flex flex-col items-center gap-3 hover:border-[#6c63ff]/50 transition-all group"
         >
-          <div className="w-12 h-12 rounded-full bg-[#6c63ff]/10 border border-[#6c63ff]/25 flex items-center justify-center text-2xl group-hover:bg-[#6c63ff]/20 transition-colors">
-            ✉️
+          <div className="w-12 h-12 rounded-full bg-[#6c63ff]/10 border border-[#6c63ff]/25 flex items-center justify-center group-hover:bg-[#6c63ff]/20 transition-colors">
+            <MailIcon className="w-6 h-6 text-[#6c63ff]" />
           </div>
           <div>
             <p className="text-xs text-[#6666aa] uppercase tracking-wider mb-1">Email</p>
@@ -30,8 +32,8 @@ export default function Contact() {
           href="tel:+2250757947428"
           className="card p-6 flex flex-col items-center gap-3 hover:border-[#43e97b]/50 transition-all group"
         >
-          <div className="w-12 h-12 rounded-full bg-[#43e97b]/10 border border-[#43e97b]/25 flex items-center justify-center text-2xl group-hover:bg-[#43e97b]/20 transition-colors">
-            📱
+          <div className="w-12 h-12 rounded-full bg-[#43e97b]/10 border border-[#43e97b]/25 flex items-center justify-center group-hover:bg-[#43e97b]/20 transition-colors">
+            <PhoneIcon className="w-6 h-6 text-[#43e97b]" />
           </div>
           <div>
             <p className="text-xs text-[#6666aa] uppercase tracking-wider mb-1">Phone</p>
@@ -40,8 +42,8 @@ export default function Contact() {
         </a>
 
         <div className="card p-6 flex flex-col items-center gap-3">
-          <div className="w-12 h-12 rounded-full bg-[#ff6584]/10 border border-[#ff6584]/25 flex items-center justify-center text-2xl">
-            📍
+          <div className="w-12 h-12 rounded-full bg-[#ff6584]/10 border border-[#ff6584]/25 flex items-center justify-center">
+            <LocationIcon className="w-6 h-6 text-[#ff6584]" />
           </div>
           <div>
             <p className="text-xs text-[#6666aa] uppercase tracking-wider mb-1">Location</p>
@@ -72,9 +74,10 @@ export default function Contact() {
               key={file}
               href={`/cv/${encodeURIComponent(file)}`}
               download
-              className="text-sm px-5 py-2.5 rounded-full border border-white/15 text-[#aaaacc] hover:border-[#6c63ff]/50 hover:text-white hover:bg-[#6c63ff]/10 transition-all"
+              className="inline-flex items-center gap-2 text-sm px-5 py-2.5 rounded-full border border-white/15 text-[#aaaacc] hover:border-[#6c63ff]/50 hover:text-white hover:bg-[#6c63ff]/10 transition-all"
             >
-              ⬇️ {label}
+              <DownloadIcon className="w-4 h-4" />
+              {label}
             </a>
           ))}
         </div>

@@ -120,7 +120,7 @@ export default function Experience() {
                 <ul className="space-y-2 mb-5">
                   {exp.highlights.map((h, j) => (
                     <li key={j} className="flex gap-3 text-[#aaaacc] text-sm leading-relaxed">
-                      <span className="text-[#6c63ff] mt-0.5 shrink-0">▸</span>
+                      <span className="text-[#6c63ff] mt-0.5 shrink-0 text-lg">•</span>
                       {h}
                     </li>
                   ))}

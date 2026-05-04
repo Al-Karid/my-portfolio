@@ -1,3 +1,5 @@
+import { SearchIcon, BuildIcon, TrendIcon, TruckIcon, CloudIcon, DatabaseIcon, RestaurantIcon, FilmIcon } from "./Icons";
+
 const projects = [
   {
     name: "RAG Regulatory Search System",
@@ -5,7 +7,7 @@ const projects = [
       "Built a Retrieval-Augmented Generation system for fast regulatory text search and legal information retrieval, enabling data-driven policy making at a national transport regulator.",
     tech: ["Python", "LlamaIndex", "NLP", "RAG", "SQL"],
     category: "AI / Data",
-    icon: "🔍",
+    icon: SearchIcon,
     color: "#6c63ff",
   },
   {
@@ -14,7 +16,7 @@ const projects = [
       "Developed internal applications for mission management, inventory tracking, and reporting dashboards with automated data processing workflows.",
     tech: ["Nuxt.js", "Next.js", "Python", "Docker", "Power BI", "Linux"],
     category: "Full-Stack",
-    icon: "🏗️",
+    icon: BuildIcon,
     color: "#43e97b",
   },
   {
@@ -23,7 +25,7 @@ const projects = [
       "Mobile application for stock market monitoring backed by AWS, with automated market data scraping and processing pipelines.",
     tech: ["React Native", "Python", "AWS SAM", "Google Cloud Console"],
     category: "Mobile / Cloud",
-    icon: "📈",
+    icon: TrendIcon,
     color: "#ff6584",
   },
   {
@@ -32,7 +34,7 @@ const projects = [
       "Mobile platform connecting customers with heavy cargo delivery providers, with scalable backend services and deployment architecture.",
     tech: ["React Native", "Supabase", "Google Cloud Console", "Twilio SMS API", "Google Play Console"],
     category: "Mobile",
-    icon: "🚛",
+    icon: TruckIcon,
     color: "#ffc83c",
   },
   {
@@ -41,7 +43,7 @@ const projects = [
       "Deployed applications on AWS with VPC setup, user provisioning, API deployment, and automated task scheduling in cloud environments.",
     tech: ["AWS (EC2, VPC, IAM, Lambda)", "Docker", "Python", "API Deployment", "Linux"],
     category: "Cloud / DevOps",
-    icon: "☁️",
+    icon: CloudIcon,
     color: "#6c63ff",
   },
   {
@@ -50,7 +52,7 @@ const projects = [
       "System to collect and centralize data from regulated entities with automated ETL pipelines for data ingestion, transformation, and consolidation.",
     tech: ["C#", "Python", "ETL Pipelines", "APIs", "Data Processing"],
     category: "Data Engineering",
-    icon: "🗄️",
+    icon: DatabaseIcon,
     color: "#43e97b",
   },
   {
@@ -59,7 +61,7 @@ const projects = [
       "Mobile restaurant ordering and management application with cloud-hosted backend services, order tracking, and business management functionalities.",
     tech: ["React Native", "Supabase", "Google Cloud Console", "Google Play Console"],
     category: "Mobile",
-    icon: "🍽️",
+    icon: RestaurantIcon,
     color: "#ff6584",
   },
   {
@@ -68,7 +70,7 @@ const projects = [
       "Movie recommendation système with ergonomic UI using content-based and collaborative filtering algorithms.",
     tech: ["Python", "JQuery", "Recommendation Algorithms"],
     category: "AI / Web",
-    icon: "🎬",
+    icon: FilmIcon,
     color: "#ffc83c",
   },
 ];
@@ -87,7 +89,7 @@ export default function Projects() {
           <div key={i} className="card p-6 flex flex-col gap-3 group">
             {/* Icon & category */}
             <div className="flex items-center justify-between">
-              <span className="text-3xl">{p.icon}</span>
+              <p.icon className="w-8 h-8" style={{ color: p.color }} />
               <span
                 className="text-xs font-medium px-2.5 py-0.5 rounded-full"
                 style={{

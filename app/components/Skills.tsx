@@ -1,7 +1,9 @@
+import { BrainIcon, ChartIcon, CodeIcon, CloudIcon } from "./Icons";
+
 const skillGroups = [
   {
     category: "Data Science & ML",
-    icon: "🧠",
+    icon: BrainIcon,
     color: "purple",
     skills: [
       "Python", "Pandas", "NumPy", "Scikit-learn",
@@ -12,7 +14,7 @@ const skillGroups = [
   },
   {
     category: "Data Engineering & BI",
-    icon: "📊",
+    icon: ChartIcon,
     color: "green",
     skills: [
       "ETL Pipelines", "Data Warehousing", "SQL", "Big Data",
@@ -23,7 +25,7 @@ const skillGroups = [
   },
   {
     category: "Software Development",
-    icon: "💻",
+    icon: CodeIcon,
     color: "pink",
     skills: [
       "Next.js", "React", "Nuxt.js", "React Native",
@@ -34,7 +36,7 @@ const skillGroups = [
   },
   {
     category: "DevOps & Cloud",
-    icon: "☁️",
+    icon: CloudIcon,
     color: "yellow",
     skills: [
       "Docker", "AWS (EC2, VPC, IAM, Lambda, SAM)",
@@ -65,10 +67,10 @@ export default function Skills() {
       </div>
 
       <div className="grid sm:grid-cols-2 gap-6">
-        {skillGroups.map(({ category, icon, color, skills }) => (
+        {skillGroups.map(({ category, icon: IconComponent, color, skills }) => (
           <div key={category} className="card p-6">
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-2xl">{icon}</span>
+              <IconComponent className="w-7 h-7 text-[#6c63ff]" />
               <h3 className="text-white font-semibold text-lg">{category}</h3>
             </div>
             <div className="flex flex-wrap gap-2">
