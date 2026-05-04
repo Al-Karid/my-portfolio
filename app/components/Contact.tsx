@@ -1,4 +1,22 @@
+"use client";
+
 import { MailIcon, PhoneIcon, LocationIcon, DownloadIcon } from "./Icons";
+
+const email = process.env.NEXT_PUBLIC_EMAIL || "grencisse@gmail.com";
+const phone = process.env.NEXT_PUBLIC_PHONE || "+2250757947428";
+const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "22507579474428";
+
+// Format phone number for display with spaces
+const formatPhoneDisplay = (phoneNumber: string) => {
+  // Remove all non-digits except + 
+  const cleaned = phoneNumber.replace(/\D/g, "");
+  // Add spaces: +225 07 57 947 428
+  if (cleaned.startsWith("225")) {
+    return `+${cleaned.slice(0, 3)} ${cleaned.slice(3, 5)} ${cleaned.slice(5, 7)} ${cleaned.slice(7, 10)} ${cleaned.slice(10)}`;
+  }
+  // Fallback for other formats
+  return phoneNumber;
+};
 
 export default function Contact() {
   return (
@@ -16,7 +34,7 @@ export default function Contact() {
       {/* Contact cards */}
       <div className="grid sm:grid-cols-3 gap-4 mb-12">
         <a
-          href="mailto:grencisse@gmail.com"
+          href={`mailto:${email}`}
           className="card p-6 flex flex-col items-center gap-3 hover:border-[#6c63ff]/50 transition-all group"
         >
           <div className="w-12 h-12 rounded-full bg-[#6c63ff]/10 border border-[#6c63ff]/25 flex items-center justify-center group-hover:bg-[#6c63ff]/20 transition-colors">
@@ -24,12 +42,12 @@ export default function Contact() {
           </div>
           <div>
             <p className="text-xs text-[#6666aa] uppercase tracking-wider mb-1">Email</p>
-            <p className="text-white text-sm font-medium">grencisse@gmail.com</p>
+            <p className="text-white text-sm font-medium">{email}</p>
           </div>
         </a>
 
         <a
-          href="tel:+2250757947428"
+          href={`tel:${phone}`}
           className="card p-6 flex flex-col items-center gap-3 hover:border-[#43e97b]/50 transition-all group"
         >
           <div className="w-12 h-12 rounded-full bg-[#43e97b]/10 border border-[#43e97b]/25 flex items-center justify-center group-hover:bg-[#43e97b]/20 transition-colors">
@@ -37,7 +55,7 @@ export default function Contact() {
           </div>
           <div>
             <p className="text-xs text-[#6666aa] uppercase tracking-wider mb-1">Phone</p>
-            <p className="text-white text-sm font-medium">+225 07 57 947 428</p>
+            <p className="text-white text-sm font-medium">{formatPhoneDisplay(phone)}</p>
           </div>
         </a>
 
@@ -54,7 +72,9 @@ export default function Contact() {
 
       {/* CTA */}
       <a
-        href="mailto:grencisse@gmail.com"
+        href={`https://wa.me/${whatsappNumber}`}
+        target="_blank"
+        rel="noopener noreferrer"
         className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#6c63ff] text-white font-semibold text-base hover:bg-[#5a52e0] transition-all shadow-lg animate-pulse-glow"
       >
         <span>Send Me a Message</span>
